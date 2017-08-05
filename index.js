@@ -1,13 +1,11 @@
 var from = require('from2')
 var blobToBuffer = require('blob-to-buffer')
 
-var win = typeof window !== 'undefined' ? window : self
-
 module.exports = function fromBlob (blob) {
-  if (!win.Blob) {
+  if (typeof Blob === 'undefined') {
     throw new Error('Blob not supported')
   }
-  if (!(blob instanceof win.Blob)) {
+  if (!(blob instanceof Blob)) {
     throw new TypeError('Expected a Blob object')
   }
   var idx = 0
