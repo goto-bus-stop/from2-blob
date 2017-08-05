@@ -1,10 +1,11 @@
 var from = require('from2')
+var blobToBuffer = require('blob-to-buffer')
 
 var win = typeof window !== 'undefined' ? window : self
 
 module.exports = function fromBlob (blob) {
-  if (!win.Blob || !win.FileReader) {
-    throw new Error('Blob or FileReader not supported')
+  if (!win.Blob) {
+    throw new Error('Blob not supported')
   }
   if (!(blob instanceof win.Blob)) {
     throw new TypeError('Expected a Blob object')
@@ -17,14 +18,6 @@ module.exports = function fromBlob (blob) {
     var start = idx
     idx += size
     var slice = blob.slice(start, idx)
-
-    var reader = new win.FileReader()
-    reader.onload = function () {
-      next(null, Buffer.from(reader.result))
-    }
-    reader.onerror = function () {
-      next(reader.error)
-    }
-    reader.readAsArrayBuffer(slice)
+    blobToBuffer(slice, next)
   })
 }

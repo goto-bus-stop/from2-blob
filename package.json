@@ -11,6 +11,7 @@
   "author": "Renée Kooi <renee@kooi.me>",
   "license": "MIT",
   "dependencies": {
+    "blob-to-buffer": "^1.2.6",
     "from2": "^2.3.0"
   },
   "devDependencies": {

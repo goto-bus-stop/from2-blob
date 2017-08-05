@@ -3,6 +3,9 @@ var test = require('tape')
 var concat = require('concat-stream')
 var fromBlob = require('./')
 
+global.Blob = window.Blob
+global.FileReader = window.FileReader
+
 test('should turn a blob into a stream', function (t) {
   t.plan(1)
 
