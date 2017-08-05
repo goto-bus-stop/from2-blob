@@ -1,6 +1,6 @@
 {
   "name": "from2-blob",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create a readable stream from a Blob or a File with from2",
   "main": "index.js",
   "scripts": {
