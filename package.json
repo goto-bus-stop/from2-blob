@@ -22,7 +22,7 @@
     "browserify": "^14.4.0",
     "concat-stream": "^1.6.0",
     "indexhtmlify": "^2.0.0",
-    "jsdom": "^11.1.0",
+    "jsdom": "^16.2.0",
     "jsdom-global": "^3.0.2",
     "tape": "^4.7.0"
   },
