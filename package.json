@@ -24,7 +24,7 @@
     "indexhtmlify": "^2.0.0",
     "jsdom": "^11.1.0",
     "jsdom-global": "^3.0.2",
-    "tape": "^4.7.0"
+    "tape": "^5.0.0"
   },
   "repository": {
     "type": "git",
