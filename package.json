@@ -19,7 +19,7 @@
     "from2": "^2.3.0"
   },
   "devDependencies": {
-    "browserify": "^16.5.0",
+    "browserify": "^17.0.0",
     "concat-stream": "^2.0.0",
     "indexhtmlify": "^2.0.0",
     "jsdom": "^11.1.0",
